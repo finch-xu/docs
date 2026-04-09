@@ -1,0 +1,115 @@
+site_name: PiDan Docs
+site_url: https://docs.pidan.dev/
+site_description: Documentation hub for PiDan open source projects
+site_author: Finch
+
+repo_url: https://github.com/finch-xu
+repo_name: finch-xu
+
+theme:
+  name: material
+  language: en
+  # logo: docs/assets/images/logo.png    # 有 logo 后取消注释
+  # favicon: docs/assets/images/logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top           # 回到顶部按钮
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home:
+    - index.md
+  - OpenMeow:
+    - Overview: openmeow/index.md
+    - Getting Started: openmeow/getting-started.md
+    - API Reference: openmeow/api-reference.md
+  - PiDanMD:
+    - Overview: pidanmd/index.md
+    - Getting Started: pidanmd/getting-started.md
+  - FileHunter:
+    - Overview: filehunter/index.md
+    - Getting Started: filehunter/getting-started.md
+
+plugins:
+  - search
+  - i18n:
+      reconfigure_material: true
+      docs_structure: suffix        # 使用 .zh.md 后缀模式
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+          nav_translations:
+            Home: 首页
+            Overview: 概述
+            Getting Started: 快速开始
+            API Reference: API 参考
+
+markdown_extensions:
+  # Python Markdown 内置
+  - toc:
+      permalink: true
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+
+  # PyMdown Extensions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.critic
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/finch-xu
+  generator: false   # 隐藏 "Made with Material for MkDocs"
+
+copyright: Copyright &copy; 2025 - 2026 Finch
