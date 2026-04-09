@@ -21,7 +21,7 @@ graph LR
 - [x] 一台有公网 IP 的服务器（或已配置域名解析）
 - [x] 已安装 Docker 和 Docker Compose
 - [x] 一个已解析到服务器的域名（如 `rttys.example.com`）
-- [x] 服务器已开启`80/tcp``443/tcp``443/udp`三个端口，分别用于 caddy tls 证书申请、https 访问端口、h3 端口。
+- [x] 服务器已开启 `80/tcp` `443/tcp` `443/udp` 三个端口，分别用于 caddy tls 证书申请、https 访问端口、h3 端口。
 
 ### 第一步：拉取镜像
 
