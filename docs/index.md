@@ -34,4 +34,12 @@ Welcome to the documentation hub for PiDan open source projects.
 
     [:octicons-arrow-right-24: Read more](filehunter/index.md)
 
+-   :material-console:{ .lg .middle } **RemoteTTYs**
+
+    ---
+
+    Remotely access the terminal on your home Mac from a browser, no NAT traversal needed.
+
+    [:octicons-arrow-right-24: Read more](remotettys/index.md)
+
 </div>
