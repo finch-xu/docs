@@ -48,6 +48,9 @@ nav:
     - Deployment: remotettys/deployment.md
     - Development: remotettys/development.md
     - API Reference: remotettys/api-reference.md
+  - CCRouter:
+    - Overview: cc-router/index.md
+    - Getting Started: cc-router/getting-started.md
   - OpenMeow:
     - Overview: openmeow/index.md
     - Getting Started: openmeow/getting-started.md
@@ -80,6 +83,7 @@ plugins:
             Deployment: 部署方式
             Usage: 使用教程
             Development: 开发调试
+            CCRouter: cc-router
 
 markdown_extensions:
   # Python Markdown 内置
